@@ -418,7 +418,7 @@ class ResnetBlock(torch.nn.Module):
 #     # input = torch.ones(1, 3, 400, 592, dtype=torch.float, requires_grad=False).cuda()
     input = torch.ones(1, 3, 100, 100, dtype=torch.float, requires_grad=False)
 #
-    model = DLNV1()
+    model = DLNV1(num_classes=5)
     out = model(input)
 #     flops, params = profile(model, inputs=(input,))
 #
